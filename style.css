@@ -1,40 +1,52 @@
 * {
     box-sizing: border-box;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
-    text-align: center;
-    font-family: 'Poppins', sans-serif,
-}
-body {
-    height: 100%;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+}
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
   }
-.icon {
-    background-size: 100%;
-    background-image: #fff;
+.zarov{
+    height: 100%px;
+    width: 60px;
+    float: left;
+    margin:0 5px;
+    /* overflow:hidden; */
+    /*background: rgb(255, 255, 255);*/
     border-radius: 50px;
     cursor: pointer;
-    color: #333;
-    display: inline-block;
-    height: 60px;
-    height: 60px;
-    font-size: 1.25rem;
-    font-weight: 300;
-    padding: 1rem 1.5rem;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 1s ease-out;
+}
+.zarov:hover{
+  width: 200px;
+}
+.icon {
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    background-image: rgb(255, 255, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    color: rgb(80, 80, 80);
     position: relative;
     z-index: 100;
     transition: color 0.45s;
   }
   .icon::before{
-    border-radius: inherit;
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    content: '';    
-    display: block;
-    height: 100%;
+    content: '';
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
     position: absolute;
-    top: 0; left: 0;
+    top: 0; left: 0; bottom: 0;
     opacity: 0;
-    width: 100%;
     z-index: -100;
     transition: opacity 0.45s;
   }
